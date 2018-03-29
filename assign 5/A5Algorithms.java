@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class A5Algorithms{
 	
 	public static final int NOISE_TOLERANCE = 200;
-    public static final int NOISE_PASSES = 69;
+	public static final int NOISE_PASSES = 69;
 
 	/* FloodFillDFS(v, viewer, fillColour)
 	   Traverse the component the vertex v using DFS and set the colour 
