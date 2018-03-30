@@ -3,7 +3,7 @@
    Programming Assignment 5 - Image Algorithms
 
 
-   B. Bird - 06/22/2015
+   G. Lorne - 06/22/2015
 */ 
 
 import java.awt.Color;
@@ -111,13 +111,6 @@ public class A5Algorithms{
 		}
 	}
 
-	/* CountComponents(G)
-	   Count the number of connected components in the provided PixelGraph 
-	   object.
-	*/
-	
-	
-	
 	public static void recursiveDFS(PixelVertex v){
 		if (v.visited)
 			return;
@@ -125,25 +118,28 @@ public class A5Algorithms{
 		for(int i = 0; i < v.getDegree(); i++)
 			recursiveDFS(v.getNeighbours()[i]);
 	}
-	
-	
-	
+
+
+	/* CountComponents(G)
+	   Count the number of connected components in the provided PixelGraph 
+	   object.
+	*/
+
 	public static int CountComponents(PixelGraph G){
-        int regions = 0;
-        PixelVertex w;
-        for(int x = 0; x < G.width; x++){
-            for(int y = 0; y < G.height; y++){
-                w = G.getPixelVertex(x,y);
-                if(!w.visited){
-                    regions++;
-                    recursiveDFS(w);
-                }
-            }
-        }
+		int regions = 0;
+		PixelVertex w;
+		for(int x = 0; x < G.width; x++){
+			for(int y = 0; y < G.height; y++){
+				w = G.getPixelVertex(x,y);
+				if(!w.visited){
+					regions++;
+					recursiveDFS(w);
+				}
+			}
+		}
 		return regions;
 	}
-    
-	
+
 	/* A5Bonus(G, v, viewer, selectedColour)
 	   [optional; up to 5 bonus marks available]
 	   Given a PixelGraph G, a PixelVertex v (which has been selected by the  
@@ -166,20 +162,20 @@ public class A5Algorithms{
 		for(int i = 0; i < v.getDegree(); i++)
 			recursiveDFSbonus(v.getNeighbours()[i], Region);
 	}
-    
-    public static Color findColour(PixelVertex v, PixelGraph G){
-        if(v.color.equals(Color.black))
-            return Color.white;
-        else
-            return Color.black;
-        
-    }
-    
-    /*Noise reduction that works sometimes kinda*/
+
+	public static Color findColour(PixelVertex v, PixelGraph G){
+		if(v.color.equals(Color.black))
+			return Color.white;
+		else
+			return Color.black;
+
+	}
+
+	/*Noise reduction that works sometimes kinda*/
 	public static void A5Bonus(PixelGraph G, PixelVertex v, ImageViewerA5 viewer, Color selectedColour){
-        PixelVertex w;
-        LinkedList<PixelVertex> Region = new LinkedList<PixelVertex>();
-        
+		PixelVertex w;
+		LinkedList<PixelVertex> Region = new LinkedList<PixelVertex>();
+
 		//traverse every vertex
 		for(int x = 0; x < G.width; x++){
 			for(int y = 0; y < G.height; y++){

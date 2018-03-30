@@ -1,9 +1,9 @@
 /* PixelVertex.java
    CSC 225 - Summer 2015
-   Programming Assignment 4 - Pixel Vertex Data Structure
+   Programming Assignment 5 - Pixel Vertex Data Structure
 
 
-   B. Bird - 04/08/2015
+   G. Lorne - 04/08/2015
 */
 
 import java.util.List;
@@ -11,20 +11,19 @@ import java.util.ArrayList;
 import java.awt.Color;
 
 public class PixelVertex{
-    
-    int X, Y;
-    Color color;
-    List<PixelVertex> neighbours;
-    boolean visited;
-	
-    PixelVertex(int X, int Y, Color color){
-        this.X = X;
-        this.Y = Y;
-        this.color = color;
-        neighbours = new ArrayList<PixelVertex>();
+
+	int X, Y;
+	Color color;
+	List<PixelVertex> neighbours;
+	boolean visited;
+
+	PixelVertex(int X, int Y, Color color){
+		this.X = X;
+		this.Y = Y;
+		this.color = color;
+		neighbours = new ArrayList<PixelVertex>();
 		visited = false;
-    }
-    
+	}
 
 	/* Add a constructor here (if necessary) */
 	
@@ -49,8 +48,8 @@ public class PixelVertex{
 	   Return an array containing references to all neighbours of this vertex.
 	*/
 	public PixelVertex[] getNeighbours(){
-        PixelVertex temp[] = new PixelVertex[this.neighbours.size()];
-        temp = this.neighbours.toArray(temp);
+		PixelVertex temp[] = new PixelVertex[this.neighbours.size()];
+		temp = this.neighbours.toArray(temp);
 		return temp;
 	}
 	

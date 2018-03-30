@@ -3,7 +3,7 @@
    Image Viewer for Programming Assignment 5
    
 
-   B. Bird - 03/25/2015
+   G. Lorne - 03/25/2015
    
    
    Incorporates extra zooming functionality by B. Jiao - 07/09/2015
