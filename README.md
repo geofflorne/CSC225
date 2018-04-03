@@ -1,2 +1,2 @@
 # CSC225
-CSC225 course work
+Homework for CSC 225. Object oriented graph theory excercises in Java.
